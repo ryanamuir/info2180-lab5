@@ -1,1 +1,125 @@
-/* Add your own styles */
+/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #478b8e;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#controls {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.1em;
+    margin-right: 10px;
+}
+
+input[type="search"] {
+    padding: 8px;
+    font-size: 1em;
+    width: 250px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 8px 15px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#result ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#result ul li {
+    background-color: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#result ul li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Loading/Error Message */
+#result p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+#result .loading, #result .error {
+    font-size: 1.2em;
+    color: #ff6f61;
+}
+
+/* Table Styles (if you want to display results in a table format) */
+table.display {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table.display th,
+table.display td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table.display th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table.display tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table.display tr:hover {
+    background-color: #f1f1f1;
+}
