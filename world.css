@@ -1,3 +1,4 @@
+/* General Page Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -13,11 +14,19 @@ header {
     padding: 20px 0;
 }
 
+img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 h1 {
     margin: 0;
     font-size: 2em;
 }
 
+/* Main Content */
 main {
     padding: 20px;
     display: flex;
@@ -26,7 +35,7 @@ main {
     justify-content: flex-start;
 }
 
-#controls {
+#searchbar {
     margin-bottom: 20px;
 }
 
@@ -44,7 +53,14 @@ input[type="search"] {
     border-radius: 5px;
 }
 
-button {
+/* Buttons Styling */
+#buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px;
+}
+
+#buttons button {
     padding: 8px 15px;
     font-size: 1em;
     background-color: #4CAF50;
@@ -54,10 +70,12 @@ button {
     cursor: pointer;
 }
 
+/* Hover effect for buttons */
 button:hover {
     background-color: #45a049;
 }
 
+/* Result Section Styling */
 #result {
     margin-top: 20px;
     width: 100%;
@@ -70,4 +88,3 @@ button:hover {
     display: flex;
     flex-direction: column;
 }
-
