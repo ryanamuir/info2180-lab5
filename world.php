@@ -15,9 +15,30 @@ $country = filter_input(INPUT_GET,"query", FILTER_SANITIZE_STRING);
 $data = $conn->query("SELECT * FROM countries WHERE name LIKE '%$country%'");
 $results = $data->fetchAll(PDO::FETCH_ASSOC);
 
-?>
-<ul>
-<?php foreach ($results as $row): ?>
-  <li><?= $row['name'] . ' is ruled by ' . $row['head_of_state']; ?></li>
-<?php endforeach; ?>
-</ul>
+if (count($results) > 0):
+  ?>
+  
+  <table>
+      <thead>
+          <tr>
+              <th>Country Name</th>
+              <th>Continent</th>
+              <th>Independence Year</th>
+              <th>Head of State</th>
+          </tr>
+      </thead>
+      <tbody>
+          <?php foreach ($results as $row): ?>
+          <tr>
+              <td><?= htmlspecialchars($row['name']); ?></td>
+              <td><?= htmlspecialchars($row['continent']); ?></td>
+              <td><?= htmlspecialchars($row['independence_year']); ?></td>
+              <td><?= htmlspecialchars($row['head_of_state']); ?></td>
+          </tr>
+          <?php endforeach; ?>
+      </tbody>
+  </table>
+  
+  <?php else: ?>
+      <p>No countries found matching your search query.</p>
+  <?php endif; ?>
